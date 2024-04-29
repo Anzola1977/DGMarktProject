@@ -171,9 +171,9 @@ public class CartSteps {
         cartPage.selectCountry.sendKeys(Keys.ENTER);
         getWait().until(ExpectedConditions.visibilityOf(cartPage.selectRegion));
         cartPage.selectRegion.click();
-        Select select = new Select(cartPage.selectRegion);
-        select.selectByVisibleText(new CartAndCheckoutFormsData().getRegion());
-        cartPage.selectRegion.sendKeys(Keys.ESCAPE);
+        cartPage.selectRegion.sendKeys(new CartAndCheckoutFormsData().getRegion());
+        cartPage.selectRegion.sendKeys(Keys.ENTER);
+        cartPage.selectRegion.sendKeys(Keys.TAB);
     }
 
     @And("inputs a post code")

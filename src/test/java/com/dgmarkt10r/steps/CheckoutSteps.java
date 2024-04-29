@@ -88,31 +88,7 @@ public class CheckoutSteps {
 
     @And("user inputs personal details and address")
     public void userInputsPersonalDetailsAndAddress() {
-        CheckoutPage checkoutPage = new CheckoutPage();
-        getWait().until(ExpectedConditions.visibilityOf(checkoutPage.firstNameInput));
-        checkoutPage.firstNameInput.click();
-        checkoutPage.firstNameInput.sendKeys(new CartAndCheckoutFormsData().getFirstName());
-        checkoutPage.lastNameInput.click();
-        checkoutPage.lastNameInput.sendKeys(new CartAndCheckoutFormsData().getLastName());
-        checkoutPage.emailInput.click();
-        checkoutPage.emailInput.sendKeys(new CartAndCheckoutFormsData().getEmail());
-        checkoutPage.telephoneInput.click();
-        checkoutPage.telephoneInput.sendKeys(new CartAndCheckoutFormsData().getTelephone());
-        checkoutPage.addressInput.click();
-        checkoutPage.addressInput.sendKeys(new CartAndCheckoutFormsData().getAddress());
-        checkoutPage.cityInput.click();
-        checkoutPage.cityInput.sendKeys(new CartAndCheckoutFormsData().getCity());
-        checkoutPage.postCodeInput.click();
-        checkoutPage.postCodeInput.sendKeys(new CartAndCheckoutFormsData().getPostCode());
-        getWait().until(ExpectedConditions.visibilityOf(checkoutPage.countrySelectGuest));
-        checkoutPage.countrySelectGuest.click();
-        checkoutPage.countrySelectGuest.sendKeys(new CartAndCheckoutFormsData().getCountry());
-        checkoutPage.countrySelectGuest.sendKeys(Keys.ENTER);
-        getWait().until(ExpectedConditions.visibilityOf(checkoutPage.regionSelectGuest));
-        checkoutPage.regionSelectGuest.click();
-        Select select = new Select(checkoutPage.regionSelectGuest);
-        select.selectByVisibleText(new CartAndCheckoutFormsData().getRegion());
-        checkoutPage.regionSelectGuest.sendKeys(Keys.ESCAPE);
+        new CheckoutPage().fillData();
     }
 
     @And("clicks on the continue button")
