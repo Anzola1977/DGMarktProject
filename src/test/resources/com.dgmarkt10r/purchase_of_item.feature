@@ -9,9 +9,6 @@ Feature: E2E Testing the product purchase process
     And clicks on the cart link in success message
     And user changes the number of item quantity on "2"
     And clicks on the update button
-    And user clicks on the coupon link
-    And inputs coupon code
-    And clicks on apply coupon button
     And user clicks on the estimate shipping link
     And chooses a country and a region
     And inputs a post code

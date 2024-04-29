@@ -9,7 +9,7 @@ public class CartAndCheckoutFormsData {
     String address = "Lessingstr. 8";
     String city = "Berlin";
     String country = "Germany";
-    String region = "Berlin";
+    String region = "Bayern";
     String postCode = "04668";
 
     public String getFirstName() {
