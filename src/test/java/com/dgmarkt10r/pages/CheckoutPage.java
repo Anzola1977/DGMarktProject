@@ -103,6 +103,7 @@ public class CheckoutPage extends BasePage {
         checkoutPage.countrySelectGuest.click();
         checkoutPage.countrySelectGuest.sendKeys(new CartAndCheckoutFormsData().getCountry());
         checkoutPage.countrySelectGuest.sendKeys(Keys.ENTER);
+        checkoutPage.regionSelectGuest.sendKeys(Keys.TAB);
         getWait().until(ExpectedConditions.visibilityOf(checkoutPage.regionSelectGuest));
         checkoutPage.regionSelectGuest.click();
         checkoutPage.regionSelectGuest.sendKeys(new CartAndCheckoutFormsData().getRegion());

@@ -13,22 +13,22 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
-        <aspectj.version>1.9.21</aspectj.version>
-        <junit-jupiter-engine>5.11.0-M1</junit-jupiter-engine>
-        <cucumber-junit-platform-engine>7.16.1</cucumber-junit-platform-engine>
+        <aspectjweaver.version>1.9.21</aspectjweaver.version>
+        <junit-jupiter-engine>5.11.0-M2</junit-jupiter-engine>
+        <cucumber-junit-platform-engine>7.18.0</cucumber-junit-platform-engine>
         <cucumber-java>7.16.0</cucumber-java>
-        <junit-platform-suite>1.11.0-M1</junit-platform-suite>
+        <junit-platform-suite>1.11.0-M2</junit-platform-suite>
         <allure-junit5>2.27.0</allure-junit5>
         <allure-cucumber7-jvm>2.27.0</allure-cucumber7-jvm>
         <logback-classic>1.5.6</logback-classic>
         <surefire-api>3.2.5</surefire-api>
-        <selenium-api>4.20.0</selenium-api>
-        <selenium-support>4.20.0</selenium-support>
+        <selenium-api>4.21.0</selenium-api>
+        <selenium-support>4.21.0</selenium-support>
         <webdrivermanager>5.8.0</webdrivermanager>
-        <selenium-chrome-driver>4.20.0</selenium-chrome-driver>
-        <selenium-devtools-v123>4.20.0</selenium-devtools-v123>
-        <selenium-edge-driver>4.20.0</selenium-edge-driver>
-        <selenium-firefox-driver>4.20.0</selenium-firefox-driver>
+        <selenium-chrome-driver>4.21.0</selenium-chrome-driver>
+        <selenium-devtools-v125>4.21.0</selenium-devtools-v125>
+        <selenium-edge-driver>4.21.0</selenium-edge-driver>
+        <selenium-firefox-driver>4.21.0</selenium-firefox-driver>
         <maven-surefire-plugin>3.2.5</maven-surefire-plugin>
         <allure-maven>2.12.0</allure-maven>
         <maven-resources-plugin>3.3.1</maven-resources-plugin>
@@ -103,8 +103,8 @@
         </dependency>
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-devtools-v124</artifactId>
-            <version>4.20.0</version>
+            <artifactId>selenium-devtools-v125</artifactId>
+            <version>4.21.0</version>
         </dependency>
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
@@ -142,7 +142,7 @@
                         </configurationParameters>
                     </properties>
                     <argLine>
-                        -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
+                        -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectjweaver.version}/aspectjweaver-${aspectjweaver.version}.jar"
                         -Dcucumber.plugin="io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"
                     </argLine>
                     <systemPropertyVariables>
@@ -155,7 +155,7 @@
                     <dependency>
                         <groupId>org.aspectj</groupId>
                         <artifactId>aspectjweaver</artifactId>
-                        <version>${aspectj.version}</version>
+                        <version>${aspectjweaver.version}</version>
                     </dependency>
                 </dependencies>
             </plugin>

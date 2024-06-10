@@ -10,6 +10,7 @@ Feature: Checking of the checkout page functionality
 
   @positive
   @Checkout
+  @isolated
   Scenario: Checking of the checkout options functionality
     Given user clicks on the checkout button from cart
     When user clicks on the guest checkout button
@@ -18,6 +19,7 @@ Feature: Checking of the checkout page functionality
 
   @positive
   @Checkout
+  @isolated
   Scenario: Checking of the billing details functionality
     Given user clicks on the checkout button from cart
     And user clicks on the guest checkout button
@@ -28,6 +30,7 @@ Feature: Checking of the checkout page functionality
 
   @positive
   @Checkout
+  @isolated
   Scenario: Checking of the delivery method functionality
     Given user clicks on the checkout button from cart
     And user clicks on the guest checkout button
@@ -40,6 +43,7 @@ Feature: Checking of the checkout page functionality
 
   @positive
   @Checkout
+  @isolated
   Scenario: Checking of the payment method functionality
     Given user clicks on the checkout button from cart
     And user clicks on the guest checkout button
@@ -54,6 +58,7 @@ Feature: Checking of the checkout page functionality
 
   @positive
   @Checkout
+  @isolated
   Scenario: Checking of the confirm order functionality
     Given user clicks on the checkout button from cart
     And user clicks on the guest checkout button

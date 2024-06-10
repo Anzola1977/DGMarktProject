@@ -1,6 +1,8 @@
 Feature: E2E Testing the product purchase process
 
-  @positive @E2E @isolated
+  @positive
+  @E2E
+  @isolated
   Scenario: Checking the product purchase process
     Given user is on the main page
     And user clicks on television category
